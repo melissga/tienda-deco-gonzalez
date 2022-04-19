@@ -1,0 +1,27 @@
+/* .div{
+    background-color:#907b68 ;
+} */
+.h1{
+    color: #a01d2b;
+    margin: 0;
+   
+} 
+/* .nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e7e2de;
+} */
+
+.nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: #c55b71;
+}
+
+.nav a:hover {
+    color:#c2d6db;
+
+}
