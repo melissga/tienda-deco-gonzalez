@@ -2,9 +2,10 @@
     background-color:#907b68 ;
 } */
 .h1{
-    color: #a01d2b;
-    margin: 0;
-   
+  /*   color: #cd5c5c; */
+    margin: 0px;
+    background-color:#fffafa;
+    color: #b56576;
 } 
 /* .nav{
     list-style-type: none;
@@ -18,10 +19,15 @@
 .nav a{
     padding: 10px;
     text-decoration: none;
-    color: #c55b71;
+    color: #b56576;
+
 }
 
 .nav a:hover {
-    color:#c2d6db;
+    color:#cd5c5c;
+}
 
+.ul{
+    margin: 0;
+    background-color: #fffafa;
 }
