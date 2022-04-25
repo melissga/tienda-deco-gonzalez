@@ -3,7 +3,7 @@
 } */
 .h1{
   /*   color: #cd5c5c; */
-    margin: 0px;
+    margin: 0px !important;
     background-color:#fffafa;
     color: #b56576;
 } 

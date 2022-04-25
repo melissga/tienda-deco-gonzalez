@@ -10,7 +10,15 @@ function App() {
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting='¡Bienvenidos!'/>
+      
      
+
+
+
+
+
+
+
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,0 +1,13 @@
+
+.carrito{
+    margin-left: 8px;
+}
+
+.botonAdd {
+    margin-top: 10px;
+}
+
+.MuiButtonGroup-groupedOutlinedHorizontal:not(:last-child) {
+    border-right-color: rgba(0, 0, 0, 0.23) !important;
+    margin-right: 20px !important;
+}
