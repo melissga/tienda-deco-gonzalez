@@ -16,7 +16,7 @@ function Item({item}) {
         </div>
         
         <div className='footer'>{ item?.price }</div>
-        <div><ItemCount/></div>
+        <div><ItemCount initial={1} stock={5}/></div>
     </div>
     )
 }

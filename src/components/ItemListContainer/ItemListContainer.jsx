@@ -26,6 +26,13 @@ function getProducts() {
         description: 'Mueble de TV modular',
         price: '$8000',
         imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
+      },
+      {
+        id: 4,
+        title: 'Rack TV',
+        description: 'Mueble de TV modular',
+        price: '$8000',
+        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
       }
      
     ];

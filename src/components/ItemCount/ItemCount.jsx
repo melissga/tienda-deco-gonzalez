@@ -9,7 +9,7 @@ import './ItemCount.css';
 
 
 function ItemCount(props) {
-    const [initial, setInitial] = useState(0);
+    const [count, setCount] = useState(props.initial);
    
 
     return (
@@ -20,20 +20,20 @@ function ItemCount(props) {
                     <ButtonGroup>
                         <Button
                             onClick={() => {
-                                setInitial(Math.max(initial - 1, 0));
+                                setCount(Math.max(count - 1, 0));
                             }}
                         >
                             {" "}
                             <RemoveIcon fontSize="small" />
                         </Button>
 
-                        <Badge  color="secondary" badgeContent={initial}>
+                        <Badge  color="secondary" badgeContent= {count}>
                             <ShoppingCartIcon className='carrito'/>{" "}
                         </Badge>
 
                         <Button
                             onClick={() => {
-                                setInitial(Math.min(initial + 1, 5));
+                                setCount(Math.min(count + 1, props.stock));
                             }}
                         >
                             {" "}
