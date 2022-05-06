@@ -2,60 +2,36 @@ import React, { useEffect, useState } from 'react';
 // import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
+import datos from '../../data/datos';
+import {useParams} from 'react-router-dom';
 
-function getProducts() {
-  const myPromise = new Promise((resolve, reject) => {
-    const productsList = [
-      {
-        id: 1,
-        title: 'Silla',
-        description: 'Silla de madera tapizada en color blanco',
-        price: '$4500',
-        imageUrl: 'https://i.pinimg.com/564x/25/8e/17/258e17aa135cd9d7f4de6dad164b2c1b.jpg'
-      },
-      {
-        id: 2,
-        title: 'Juego de comedor',
-        description: 'Juego de comedor x6',
-        price: '$2600',
-        imageUrl: 'https://i.pinimg.com/564x/d2/30/19/d23019fc3dbd05e6ad12e091be9667d8.jpg'
-      },
-      {
-        id: 3,
-        title: 'Rack TV',
-        description: 'Mueble de TV modular',
-        price: '$8000',
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
-      },
-      {
-        id: 4,
-        title: 'Rack TV',
-        description: 'Mueble de TV modular',
-        price: '$8000',
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
-      }
-     
-    ];
+
+function getProducts(categoryid) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(productsList);
-    }, 2000);
+      if (categoryid !== undefined) {
+        const arrayFiltered = datos.filter((item) => {
+          return item.category === categoryid;
+        });
+        resolve(arrayFiltered);
+      } else {
+        resolve(datos);
+      }
+    }, 300);
   });
-  return myPromise;
 }
 
-function ItemListContainer({ greeting }) {
-  // function dummy() {
-  //   console.log('dummy prop function');
-  // }
-
+function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const {categoryid} = useParams();
+  
 
   useEffect(() => {
-    getProducts()
-      .then(res => {
-        setProducts(res);
+    getProducts(categoryid)
+      .then(respuestaPromise => {
+        setProducts(respuestaPromise);
       })
-  }, []);
+  }, [categoryid]);
 
   return (
     <div className='list-item-container'>
