@@ -1,8 +1,17 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import {useState} from 'react';
+
 
 function ItemDetail({ item }) {
+    const [isInCart, setIsInCart] = useState(false);
+
+    function onAdd(count) {
+        console.log(`Agregaste al carrito ${count} items`);
+        setIsInCart(true);
+    }
+
   return (
     <div className='item-detail'>
         <div className='left'>
@@ -15,9 +24,14 @@ function ItemDetail({ item }) {
                 <h2>{ item?.title }</h2>
                 <p>{ item?.description}</p>
                 <p>{ item?.price }</p>
+                { isInCart? 
+                    <p>Sí está en el carrito</p>
+                :
                 <div className='count-container'>
-                    <ItemCount initial={0} stock={item.stock} onAdd={() => {}} />
+                    <ItemCount onAdd={onAdd} initial={1} stock={item.stock} />
                 </div>
+                }
+                
             </div>
         </div>
     </div>

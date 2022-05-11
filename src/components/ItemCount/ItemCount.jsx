@@ -10,7 +10,6 @@ import './ItemCount.css';
 
 function ItemCount(props) {
     const [count, setCount] = useState(props.initial);
-   
 
     return (
         <>
@@ -27,8 +26,8 @@ function ItemCount(props) {
                             <RemoveIcon fontSize="small" />
                         </Button>
 
-                        <Badge  color="secondary" badgeContent= {count}>
-                            <ShoppingCartIcon className='carrito'/>{" "}
+                        <Badge color="secondary" badgeContent={count}>
+                            <ShoppingCartIcon className='carrito' />{" "}
                         </Badge>
 
                         <Button
@@ -41,9 +40,7 @@ function ItemCount(props) {
                         </Button>
                     </ButtonGroup>
                 </div>
-                <button className='botonAdd'> Agregar al carrito 
-                 
-                </button>
+                <button onClick={() => props.onAdd(count)} className='botonAdd'>Agregar al carrito</button>
 
             </div>
 
