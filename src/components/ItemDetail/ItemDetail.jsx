@@ -2,14 +2,17 @@ import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 import {useState} from 'react';
+import useCartContext from '../../store/CartContext';
 
 
 function ItemDetail({ item }) {
     const [isInCart, setIsInCart] = useState(false);
+    const {addToCart} = useCartContext(); //del hook 'useCartContext' saco la fc 'addToCart'
 
     function onAdd(count) {
-        console.log(`Agregaste al carrito ${count} items`);
         setIsInCart(true);
+        addToCart(item, count); //Cuando se ejecuta el 'onAdd' llamo al 'addToCart' y le paso 'item' que viene por props y 'count' que viene de itemCount
+        console.log("Agregado al cart: ", item, count);
     }
 
   return (
