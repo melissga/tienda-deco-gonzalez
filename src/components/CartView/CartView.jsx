@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 3- mostrar una interfaz para eliminar items o vaciar Carrito */
 
 function CartView(props) {
-    const { cart } = useCartContext();
+    const { cart, removeFromCart, clearCart} = useCartContext();
     console.log("CART", cart);
     if (cart.length === 0) {
         return <div style={{textAlign: "center"}}>
@@ -17,17 +17,22 @@ function CartView(props) {
         </div>
     }
     else {
-        return cart.map(itemCart => {
+        return <div>
+        {cart.map(itemCart => {
             return <div style={{textAlign: "center"}} key={itemCart.id}>
                 <br />
                 <h2>{itemCart.title}</h2>
                 <h2>{itemCart.cant}</h2>
                 <h2>${itemCart.cant * itemCart.price}</h2>
-                <button style={{color: "red"}}>X</button>
+                <button onClick={() => removeFromCart(itemCart.id)} style={{color: "red"}}>X</button>
                 <hr /><br />
             </div>
-        });
+           
+        })}
+        <button onClick={clearCart} >Vaciar carrito</button>
+         </div>
     }
+  
 }
 
 export default CartView;

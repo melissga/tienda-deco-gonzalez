@@ -30,37 +30,29 @@ const datos = [
       {
         id: 4,
         title: 'Rack TV',
-        description: 'Mueble de TV modular',
-        price: 8000,
-        category: 'muebles',
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
-      },
-      {
-        id: 4,
-        title: 'Rack TV',
-        description: 'Mueble de TV modular',
+        description: 'Mueble de TV modular en color negro',
         price: 8000,
         category: 'Muebles',
         stock: 5,
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
+        imageUrl: 'https://i.pinimg.com/564x/19/a5/dc/19a5dc91e12dfd7105eb5995d4d8efd9.jpg'
       },
       {
         id: 5,
-        title: 'Rack TV',
-        description: 'Mueble de TV modular',
-        price: 8000,
+        title: 'Sillón Melisa',
+        description: 'Sillón sofá retro vintage nórdico de 2 cuerpos',
+        price: 30000,
         category: 'sillones',
         stock: 5,
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
+        imageUrl: 'https://i.pinimg.com/564x/01/0d/91/010d913bd29aaeb550c6c5603b890878.jpg'
       },
       {
         id: 6,
-        title: 'Rack TV',
-        description: 'Mueble de TV modular',
+        title: 'Cubos triple',
+        description: 'Cubos realizados en madera color blanco',
         price: 8000,
         category: 'accesorios',
         stock: 5,
-        imageUrl: 'https://i.pinimg.com/564x/38/93/46/389346e3d02323de0430cd26bde4108d.jpg'
+        imageUrl: 'https://i.pinimg.com/564x/26/12/54/2612543ac3112a94e30b0554693a999b.jpg'
       }
 ];
 export default datos;
