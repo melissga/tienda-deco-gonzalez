@@ -35,7 +35,7 @@ if (!item) {
                         <Link to= "/cart">Ir al carrito</Link>
                     :
                     <div className='count-container'>
-                        <ItemCount onAdd={onAdd} initial={1} stock={item.stock} />
+                        <ItemCount onAdd={onAdd} initial={1} stock={item?.stock} />
                     </div>
                     }
                     
