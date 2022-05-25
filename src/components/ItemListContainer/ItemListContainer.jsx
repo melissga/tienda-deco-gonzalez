@@ -29,8 +29,8 @@ function ItemListContainer() {
     <div className='list-item-container'>
       <ItemList items={products} />
         {/* <ItemCount initial={0} stock={5} onAdd={dummy} /> */}
+       
     </div>
   )
-}
-
-export default ItemListContainer
+  }
+export default ItemListContainer;

@@ -48,10 +48,16 @@ export function CartContextProvider({children}) {
         return cartIs;
     }
 
+    function getTotalPrice() {
+        let totalPrice =0;
+        cart.forEach(item => totalPrice += item.cant * item.price)
+        return totalPrice;
+    }
+
     const contextFunction = () => console.log("Contexto listo");
 
     return (
-        <Provider value={ {contextFunction, cart, addToCart, removeFromCart,clearCart, IsInCart} }> {/* le pasamos como value para ver que hay en el carrito */}
+        <Provider value={ {contextFunction, cart, addToCart, removeFromCart,clearCart, IsInCart, getTotalPrice} }> {/* le pasamos como value para ver que hay en el carrito */}
             {children}
         </Provider>
     );
