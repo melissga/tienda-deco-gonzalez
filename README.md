@@ -1,10 +1,10 @@
-# Project Title
+# Título del Proyecto
 
 Interior Design
 
-# Project Description
+# Descripción del Proyecto
 
-Interior Design es un sitio web e-commerce destinado a la decoración de ambientes. 
+Interior Design es un sitio web e-commerce destinado a la venta de productos de decoración de ambientes. 
 
 # Herramientas utilizadas
 Para la elaboración de este proyecto se utilizaron las siguientes herramientas:
