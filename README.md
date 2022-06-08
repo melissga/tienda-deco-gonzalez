@@ -2,6 +2,8 @@
 
 Interior Design
 
+![](ProyectoFinal.gif)
+
 # Descripción del Proyecto
 
 Interior Design es un sitio web e-commerce destinado a la venta de productos de decoración de ambientes. 
