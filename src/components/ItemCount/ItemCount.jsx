@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import './ItemCount.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function ItemCount(props) {
@@ -40,7 +41,7 @@ function ItemCount(props) {
                         </Button>
                     </ButtonGroup>
                 </div>
-                <button onClick={() => props.onAdd(count)} className='botonAdd'>Agregar al carrito</button>
+                <button type="button" className='btn btn-primary btn-lg botonAdd titulos' onClick={() => props.onAdd(count)} >Agregar al carrito</button>
 
             </div>
 

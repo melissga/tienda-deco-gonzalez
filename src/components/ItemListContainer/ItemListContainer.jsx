@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
 import {useParams} from 'react-router-dom';
-import {getAllItems as getProducts, getItemsByCategory} from '../../data/database';
+import {getAllItems as getProducts, getItemsByCategory, dataToFirebase} from '../../data/database';
 
 
 
@@ -29,7 +29,7 @@ function ItemListContainer() {
     <div className='list-item-container'>
       <ItemList items={products} />
         {/* <ItemCount initial={0} stock={5} onAdd={dummy} /> */}
-       
+       {/*  <button onClick={dataToFirebase}>Add products to Firebase</button>  */}
     </div>
   )
   }

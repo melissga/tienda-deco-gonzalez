@@ -14,16 +14,19 @@ function NavBar(props) {
 
     return (
         <> 
-            <h1 className='h1'>Interior Design</h1>
+        <Link to="/" className='nav-link marca'>
+        <h1 className='h1 titulos'>Interior Design</h1>
+        </Link>
+            
             <ul className= "nav justify-content-center ul">
                 <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/category/sillones">Sillones</Link>
+                    <Link className="nav-link active titulosCategories btn-one" aria-current="page" to="/category/sillones">Sillones</Link>
                 </li>
                 <li class="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/category/muebles">Muebles</Link>
+                    <Link className="nav-link active titulosCategories btn-one" aria-current="page" to="/category/muebles">Muebles</Link>
                 </li>
                 <li class="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/category/accesorios">Accesorios Deco</Link>
+                    <Link className="nav-link active titulosCategories btn-one" aria-current="page" to="/category/accesorios">Accesorios Deco</Link>
                 </li>
 
             </ul>

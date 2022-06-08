@@ -1,8 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { async } from "@firebase/util";
 import { initializeApp } from "firebase/app";
-import {getFirestore, doc, getDoc, query, where, collection, getDocs, setDoc, Timestamp, addDoc} from 'firebase/firestore/lite';
+import {getFirestore, doc, getDoc, query, where, collection, getDocs, setDoc, Timestamp, addDoc,add} from 'firebase/firestore/lite';
 import datos from './datos';
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -64,9 +65,10 @@ export async function getItemsByCategory(categoryId){
 
  }
  
+ //descomentar para la carga de datos a Firebase
 export async function dataToFirebase(){
   const PRODUCTS = datos;
-  const miColec = collection(firestoreDB, 'deco');
+  const miColec = collection(firestoreDB, 'products');
 
   PRODUCTS.forEach((item) => {
     const newDoc = doc(miColec);
@@ -76,7 +78,7 @@ export async function dataToFirebase(){
         console.log("Error adding document: ", err);
       });
   });
-}
+} 
 
 export async function createBuyOrder(orderData){
   const buyTimestamp = Timestamp.now();
@@ -85,8 +87,7 @@ export async function createBuyOrder(orderData){
   };
   const miColec = collection(firestoreDB, 'buyOrders');
   const orderDoc = await addDoc(miColec, orderWithDate);
-
   console.log("Orden lista con el ID:", orderDoc.id);
-  
+  alert("Su orden fue enviada. Código de compra: " + orderDoc.id);
 }
  

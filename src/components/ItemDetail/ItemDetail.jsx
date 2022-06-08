@@ -28,12 +28,16 @@ if (!item) {
             </div>
             <div className='right'>
                 <div className='info-container'>
-                    <h2>{ item?.title }</h2>
-                    <p>{ item?.description}</p>
-                    <p>{ item?.price }</p>
-                    { isInCart? 
-                        <Link to= "/cart">Ir al carrito</Link>
-                    :
+                    <h2 className='titulos color'>{ item?.title }</h2>
+                    <p className='titulos color'>{ item?.description}</p>
+                    <p className='titulos color'>${ item?.price }</p>
+                    {isInCart ?
+
+                        <Link to="/cart">
+                            <button type="button" className='btn btn-outline-info titulos'>Ir al carrito</button>
+                        </Link>
+
+                        :
                     <div className='count-container'>
                         <ItemCount onAdd={onAdd} initial={1} stock={item?.stock} />
                     </div>

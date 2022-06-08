@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     float: right;
-    top: -90px;
+    top: -70px;
     position: relative;
-    right: 20px;
+    right: 50px;
+}
+.textWidget{
+    position: relative;
+    float: right;
+    top: -60px;
+    right: -15px;
+    color: #fff9ff;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
 }
